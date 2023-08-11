@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;1,300;1,400;1,600&display=swap");
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s all linear;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, hsla(296, 100%, 6%, 1) 0%, hsla(5, 90%, 24%, 1) 100%);    padding: 10px;
+
+}
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: #751006;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 40px;
+    margin-left: 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edeef0;
+    border-radius: 30px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 1rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5445;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+
+ul li {
+    list-style-type: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    width: 30px ;
+    height: 30px;
+    position: absolute;
+    background-image: url("assets/unchecked.png");
+    background-position: center;
+    background-size: cover;
+    left: 8px;
+    top: 12px;
+    border-radius: 50%;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: green;
+}
+
+ul li.checked::before {
+    background-image: url("assets/checked.png");
+
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+
+}
+
+ul li span:hover {
+    color: red;
+}
